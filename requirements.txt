@@ -1,1 +1,14 @@
 fastapi[all]
+uvicorn
+transformers
+langchain-google-genai
+langchain-community
+langchain-huggingface
+google-genai
+pillow
+python-dotenv
+chromadb
+pydantic
+google-generativeai
+langchain-google-genai
+bitsandbytes==0.45.4
