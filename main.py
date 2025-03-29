@@ -38,7 +38,7 @@ GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY")
 os.environ["GOOGLE_API_KEY"] = GOOGLE_API_KEY
 
 embeddings = GoogleGenerativeAIEmbeddings(model="models/embedding-001")
-db = Chroma(persist_directory="./chroma_db", embedding_function=embeddings)
+db = Chroma(persist_directory="chroma_db", embedding_function=embeddings)
 
 generator = pipeline("text-generation", model="23aryangupta/Llama-3.2-3B-Instruct-hate_speech")
 llm = HuggingFacePipeline(pipeline=generator)
