@@ -27,6 +27,13 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+@app.get("/")
+def home():
+    return {"message_from_anmol": "Hello, your FastAPI server is running! "}
+
+@app.get("/test")
+def test():
+    return {"message": "This is a test route!"}
 GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY")
 os.environ["GOOGLE_API_KEY"] = GOOGLE_API_KEY
 
